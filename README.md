@@ -24,12 +24,6 @@ This repository showcases my technical submissions for the Core Team Members Rec
 ### Task 1: Foodborne Disease Analysis
 Analysis of foodborne diseases dataset using ML and Data Science techniques.
 
-**Implementation Details:**
-- 📊 Comprehensive Exploratory Data Analysis (EDA)
-- 🔧 Feature engineering and data preprocessing
-- 🤖 ML model selection and implementation
-- 📈 Results visualization and interpretation
-
 ### Task 2: Bone Marrow Cell Classification
 CNN-based classification system utilizing both custom and pre-built architectures.
 
@@ -41,13 +35,7 @@ CNN-based classification system utilizing both custom and pre-built architecture
 - ✓ AUC-ROC
 - ✓ Confusion Matrix
 
-**Key Features:**
-- 🔄 Data augmentation pipeline
-- 🧠 Custom CNN architecture
-- 📊 Performance comparison dashboard
-- 📉 Visualization of metrics
-
-## 🚀 Installation & Usage
+## 🚀 Usage
 
 1. Clone the repository:
 ```bash
@@ -59,29 +47,9 @@ git clone https://github.com/harshitt13/GDGC_MACHINE_LEARNING_HARSHIT-KUSHWAHA.g
 cd GDGC_MACHINE_LEARNING_HARSHIT-KUSHWAHA
 ```
 
-3. Install required dependencies:
-```bash
-pip install -r requirements.txt
-```
-
 ## 💻 Technologies
 
 ### Core Technologies
-```python
-# Data Processing
-import pandas as pd
-import numpy as np
-
-# Visualization
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-# Machine Learning
-from sklearn import metrics
-import tensorflow as tf
-import torch
-import keras
-```
 
 ### Framework Stack
 - **Data Processing & Analysis**
@@ -94,9 +62,6 @@ import keras
   
 - **Machine Learning**
   - Scikit-learn
-  - TensorFlow
-  - Keras
-  - PyTorch
 
 ## 📫 Contact
 
@@ -107,11 +72,11 @@ import keras
 **Harshit Kushwaha**  
 ML/AI Developer
 
-📧 [Your Email Address]
+📧 find.harshitkushwaha@gmail.com
 
 </div>
 
 ---
 <div align="center">
-Made with ❤️ by Harshit Kushwaha
+Made by Harshit Kushwaha
 </div>
