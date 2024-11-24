@@ -1,59 +1,117 @@
-Core Team Members Recruitment 2024-25
-This repository contains my submissions for the Core Team Members Recruitment 2024-25. It showcases my solutions to assigned tasks, demonstrating my skills in Machine Learning and Data Science.
+<div align="center">
 
-Table of Contents
-Introduction
-Tasks
-How to Use
-Technologies Used
-Contact
-Introduction
-As part of the Core Team Members Recruitment 2024-25, I have worked on the following tasks to demonstrate my technical expertise and analytical abilities.
+# Core Team Members Recruitment 2024-25
 
-Tasks
-Task 1
-Description: You are provided with a dataset about foodborne diseases. Analyze the dataset and answer the questions by applying appropriate Machine Learning models or Data Science techniques.
+![GitHub last commit](https://img.shields.io/github/last-commit/harshitt13/GDGC_MACHINE_LEARNING_HARSHIT-KUSHWAHA)
+![GitHub repo size](https://img.shields.io/github/repo-size/harshitt13/GDGC_MACHINE_LEARNING_HARSHIT-KUSHWAHA)
+![GitHub stars](https://img.shields.io/github/stars/harshitt13/GDGC_MACHINE_LEARNING_HARSHIT-KUSHWAHA)
 
-Approach:
+Repository containing submissions for Core Team Members Recruitment, featuring Machine Learning and Data Science solutions.
+</div>
 
-Exploratory Data Analysis (EDA) to understand the dataset.
-Feature engineering and preprocessing.
-Selection and implementation of appropriate ML models or statistical techniques.
-Interpretation and visualization of results.
-Task 2
-Description: You are provided with a Bone Marrow Cell Classification Dataset. Perform performance analysis on the dataset using two CNN models (custom and pre-built) for their classification abilities. Include evaluation metrics such as:
+## 📋 Table of Contents
+- [Introduction](#-introduction)
+- [Tasks Overview](#-tasks-overview)
+- [Installation & Usage](#-installation--usage)
+- [Technologies](#-technologies)
+- [Contact](#-contact)
 
-Accuracy
-Precision
-Recall
-F1-score
-AUC-ROC
-Confusion Matrix
-Approach:
+## 🎯 Introduction
+This repository showcases my technical submissions for the Core Team Members Recruitment 2024-25. The projects demonstrate expertise in Machine Learning, Deep Learning, and Data Science through practical implementations and analysis.
 
-Preprocessing and augmentation of the dataset.
-Implementation of two CNN models (custom and pre-built).
-Evaluate and compare performance using the specified metrics.
-Tabulate results for clarity and include visualizations for AUC-ROC and Confusion Matrix.
-How to Use
-Clone this repository:
-bash
-Copy code
+## 📚 Tasks Overview
+
+### Task 1: Foodborne Disease Analysis
+Analysis of foodborne diseases dataset using ML and Data Science techniques.
+
+**Implementation Details:**
+- 📊 Comprehensive Exploratory Data Analysis (EDA)
+- 🔧 Feature engineering and data preprocessing
+- 🤖 ML model selection and implementation
+- 📈 Results visualization and interpretation
+
+### Task 2: Bone Marrow Cell Classification
+CNN-based classification system utilizing both custom and pre-built architectures.
+
+**Evaluation Metrics:**
+- ✓ Accuracy
+- ✓ Precision
+- ✓ Recall
+- ✓ F1-score
+- ✓ AUC-ROC
+- ✓ Confusion Matrix
+
+**Key Features:**
+- 🔄 Data augmentation pipeline
+- 🧠 Custom CNN architecture
+- 📊 Performance comparison dashboard
+- 📉 Visualization of metrics
+
+## 🚀 Installation & Usage
+
+1. Clone the repository:
+```bash
 git clone https://github.com/harshitt13/GDGC_MACHINE_LEARNING_HARSHIT-KUSHWAHA.git
-Navigate to the repository:
-bash
-Copy code
-cd GDGC_MACHINE_LEARNING_HARSHIT-KUSHWAHA
-Open the respective task folders to find the solutions and follow the instructions in the README or code comments to execute the tasks.
-Technologies Used
-Programming Language: Python
-Libraries/Frameworks:
-Pandas, NumPy, Matplotlib, Seaborn
-Scikit-learn, TensorFlow, Keras, PyTorch
-Other relevant tools for EDA and visualization
-Contact
-If you have any questions or suggestions, feel free to reach out:
+```
 
-Name: Harshit Kushwaha
-GitHub: harshitt13
-Email: [Your Email Address]
+2. Navigate to project directory:
+```bash
+cd GDGC_MACHINE_LEARNING_HARSHIT-KUSHWAHA
+```
+
+3. Install required dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+## 💻 Technologies
+
+### Core Technologies
+```python
+# Data Processing
+import pandas as pd
+import numpy as np
+
+# Visualization
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Machine Learning
+from sklearn import metrics
+import tensorflow as tf
+import torch
+import keras
+```
+
+### Framework Stack
+- **Data Processing & Analysis**
+  - Pandas
+  - NumPy
+  
+- **Visualization**
+  - Matplotlib
+  - Seaborn
+  
+- **Machine Learning**
+  - Scikit-learn
+  - TensorFlow
+  - Keras
+  - PyTorch
+
+## 📫 Contact
+
+<div align="center">
+
+[![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/harshitt13)
+
+**Harshit Kushwaha**  
+ML/AI Developer
+
+📧 [Your Email Address]
+
+</div>
+
+---
+<div align="center">
+Made with ❤️ by Harshit Kushwaha
+</div>
