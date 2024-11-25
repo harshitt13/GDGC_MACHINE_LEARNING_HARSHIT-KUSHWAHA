@@ -11,32 +11,80 @@ from sklearn.metrics import confusion_matrix, roc_curve, auc
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Load and preprocess the data
-def create_custom_cnn():
+
+# Data Preprocessing
+def preprocess_data(X_train, X_test):
+    # Normalize pixel size
+    X_train = X_train / 255.0
+    X_test = X_test / 255.0
+    return X_train, X_test
+
+# Create a custom CNN model
+def create_custom_cnn(input_shape, num_classes):
+    model = Sequential([
+        Conv2D(32, kernel_size=(3, 3), activation='relu', input_shape=input_shape),
+        MaxPooling2D(pool_size=(2, 2)),
+        Conv2D(64, kernel_size=(3, 3), activation='relu'),
+        MaxPooling2D(pool_size=(2, 2)),
+        Conv2D(128, kernel_size=(3, 3), activation='relu'),
+        MaxPooling2D(pool_size=(2, 2)),
+        Flatten(),
+        Dense(64, activation='relu'),
+        Dropout(0.5),
+        Dense(num_classes, activation='softmax')
+    ])
     return model
 
-def create_vgg16_model():
-    # Load the VGG16 model
-    vgg16 = VGG16(include_top=False, input_shape=(224, 224, 3))
-    # Freeze the layers
-    for layer in vgg16.layers:
-        layer.trainable = False
-    # Add the custom layers
-    model = Sequential()
-    model.add(vgg16)
-    model.add(Flatten())
-    model.add(Dense(512, activation='relu'))
-    model.add(Dropout(0.5))
-    model.add(Dense(1, activation='sigmoid'))
-    return model
-
-def evaluate_model():
+# VGG16 Transfer Learning Model
+def create_vgg16_model(input_shape, num_classes):
+    base_model = VGG16(weights='imagenet', include_top=False, input_shape=input_shape)
     
-def preprocess_data(x,y):
-    return x, y
-
-def tarin_model(model, x_train, y_train):
+    # Freeze the layers
+    for layer in base_model.layers:
+        layer.trainable = False
+    
+    x = Flatten()(base_model.output)
+    x = Dense(512, activation='relu')(x)
+    x = Dropout(0.5)(x)
+    outputs = Dense(num_classes, activation='softmax')(x)
+    
+    model =  Model(inputs=base_model.input, outputs=outputs)
     return model
+
+# Evaluation Metrics
+def evaluate_model(model, X_test, y_test):
+    # Predictions
+    y_pred = model.predict(X_test)
+    y_pred_classes = np.argmax(y_pred, axis=1)
+    y_test_classes = np.argmax(y_test, axis=1) if len(y_test.shape) > 1 else y_test
+
+    # Calculate metrics
+    n_classes = y_pred.shape[1]
+    fpr = dict()
+    tpr = dict()
+    roc_auc = dict()
+    
+    for i in range(n_classes):
+        fpr[i], tpr[i], _ = roc_curve(y_test[:, i], y_pred[:, i])
+        roc_auc[i] = auc(fpr[i], tpr[i])
+        
+    # Confusion Matrix
+    cm = confusion_matrix(y_test_classes, y_pred_classes)
+    
+    return{
+        'accoracy': accuracy,
+        'precision': precision,
+        'recall': recall,
+        'f1': f1,
+        'roc': roc_auc,
+        'confusion_matrix': cm
+    }
+
+# Plot Evaluation Metrics
+def plot_metrics(custom_metrics, vgg_mertics):
+    # Create comparison table
+    metrics_df = pd.DataFrame({})
+        
 
 def main():
 
