@@ -64,6 +64,9 @@ cd GDGC_MACHINE_LEARNING_HARSHIT-KUSHWAHA
   - Scikit-learn
   - Tensorflow
 
+- **Models Used**
+  - Linear Regression
+  - Convolutional Neural Networks
 
 ## 📫 Contact
 
