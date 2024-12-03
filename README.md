@@ -82,6 +82,3 @@ ML/AI Developer
 </div>
 
 ---
-<div align="center">
-Made by Harshit Kushwaha
-</div>
